@@ -38,7 +38,7 @@
     p {
         font-family: "PowerGrotesk", sans-serif;
         /* font-weight: 300; */
-        @apply font-light text-justify text-[12px] sm:text-[14px] lg:text-[16px];
+        @apply font-light text-justify text-[14px] lg:text-[16px];
     }
 }
 
