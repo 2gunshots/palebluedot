@@ -9,7 +9,7 @@ const DiscoverySection = ({ id, title, description, link }) => {
                 <p className="font-outfit">{description}</p>
                 <a href={link} target="_blank" rel="noopener noreferrer">
                     <span className="font-bold font-outfit hover:underline">
-                        Explore
+                        Explore <sup className="font-normal">↗</sup>
                     </span>
                 </a>
             </div>

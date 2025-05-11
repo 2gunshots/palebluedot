@@ -36,7 +36,7 @@ const ShootingStar = () => {
                 duration: 1.3,
                 repeat: -1,
                 repeatDelay: 30,
-                delay: 8,
+                delay: 9,
                 ease: "expoScale(0.5,10,none)",
             }
         );

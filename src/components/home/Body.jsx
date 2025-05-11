@@ -163,6 +163,7 @@ const Body = () => {
                             width="300px"
                         /> */}
             </div>
+            <div className="bg-none mb-20"></div>
         </div>
     );
 };

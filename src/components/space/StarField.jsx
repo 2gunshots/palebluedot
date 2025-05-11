@@ -39,7 +39,7 @@ const StarField = () => {
     return (
         <div
             ref={spaceRef}
-            className="h-full fixed inset-0 overflow-hidden m-2"
+            className="h-full w-full fixed inset-0 overflow-hidden m-2"
         >
             <ShootingStar />
             {smallStars.map((item) => {

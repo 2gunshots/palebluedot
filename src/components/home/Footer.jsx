@@ -1,10 +1,21 @@
+import { useState, useEffect } from "react";
 import DiscoverySection from "./DiscoverySection ";
 
 const Footer = () => {
+    const images = [
+        "https://science.nasa.gov/wp-content/uploads/2023/12/voyager-gold-record-display-10-5-1977-30214218763-o.jpg",
+        "https://science.nasa.gov/wp-content/uploads/2024/03/voyager-golden-record-cover.jpg",
+    ];
+    const [randomRecord, setRandomRecord] = useState("");
+
+    useEffect(() => {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        setRandomRecord(images[randomIndex]);
+    }, []);
     return (
         <footer
             style={{ backdropFilter: "blur(10px)" }}
-            className="relative z-5 text-center mt-20 px-10 py-15 bg-white text-black"
+            className="relative z-5 text-center px-10 py-15 bg-white text-black"
         >
             {/* <div
                 className="absolute inset-0 bg-white z-[-1]"
@@ -14,7 +25,7 @@ const Footer = () => {
                 <h2 className="font-outfit font-semibold text-start py-5">
                     Mission Brief
                 </h2>
-                <div className="my-7 grid grid-cols-12 gap-x-10">
+                <div className="my-7 grid grid-cols-12 md:gap-x-10">
                     <ul className="col-span-12 lg:col-span-7 border-b">
                         <li>
                             <DiscoverySection
@@ -39,7 +50,7 @@ const Footer = () => {
                     </ul>
                     <div className="hidden mx-5 lg:block lg:col-span-5 rounded-full w-fill aspect-square overflow-hidden">
                         <img
-                            src="https://science.nasa.gov/wp-content/uploads/2023/12/voyager-gold-record-display-10-5-1977-30214218763-o.jpg"
+                            src={randomRecord}
                             alt="Voyager Golden Record"
                             className="object-cover transform scale-120 origin-center"
                         />
