@@ -1,0 +1,54 @@
+@import "./fonts.css";
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    .font-offbit {
+        font-family: "OffBit", sans-serif;
+    }
+    .font-outfit {
+        font-family: "Outfit", sans-serif;
+    }
+    .font-grotesk {
+        font-family: "PowerGrotesk", sans-serif;
+    }
+    .font-artific {
+        font-family: "Artific", sans-serif;
+    }
+
+    h1 {
+        @apply text-7xl font-semibold;
+    }
+    h2 {
+        @apply text-4xl;
+    }
+    h3 {
+        @apply text-3xl font-semibold;
+    }
+    h4{
+        @apply text-xl font-bold
+    }
+    p {
+        font-family: "PowerGrotesk", sans-serif;
+        /* font-weight: 300; */
+        @apply font-light text-justify text-[16px];
+    }
+}
+
+@layer components {
+    *::selection {
+        @apply text-blue-400;
+    }
+    .bg-theme {
+        @apply bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-900
+  dark:bg-none dark:bg-black dark:text-white;
+    }
+
+    .bg-theme-foreground {
+        @apply bg-white/50 dark:bg-black/70;
+    }
+    .border-theme {
+        @apply border-1 border-gray-400 dark:border-white/16;
+    }
+}
