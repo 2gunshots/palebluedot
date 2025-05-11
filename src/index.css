@@ -26,8 +26,8 @@
     h3 {
         @apply text-3xl font-semibold;
     }
-    h4{
-        @apply text-xl font-bold
+    h4 {
+        @apply text-xl font-bold;
     }
     p {
         font-family: "PowerGrotesk", sans-serif;
@@ -39,6 +39,13 @@
 @layer components {
     *::selection {
         @apply text-blue-400;
+    }
+    * {
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+        scrollbar-width: none; /* Firefox */
+    }
+    *::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
     }
     .bg-theme {
         @apply bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-900
