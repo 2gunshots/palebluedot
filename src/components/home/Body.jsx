@@ -44,7 +44,7 @@ const Body = () => {
                 <div className="w-full h-auto min-h-[200px] bg-black ">
                     <img
                         ref={s2Ref}
-                        src="/src/assets/blue3.jpg"
+                        src="/pale blue dot.webp"
                         // onLoad={() => setIsLoaded(true)}
                         className="w-full h-full md:rounded-2xl opacity-0"
                     />
