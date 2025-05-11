@@ -4,8 +4,18 @@ import gsap from "gsap";
 function BlurModal(props) {
     const [isOpen, setIsOpen] = useState(true);
     const modalRef = useRef(null);
+    const [isScreenSmall, setIsScreenSmall] = useState(false);
 
-    // GSAP animations when the modal opens
+    const checkScreenSize = () => {
+        return window.innerWidth > 768; // 640px
+    };
+
+    useEffect(() => {
+        if (!checkScreenSize()) {
+            setIsScreenSmall(true);
+        }
+    }, []);
+
     useEffect(() => {
         if (isOpen && modalRef.current) {
             gsap.fromTo(
@@ -36,7 +46,7 @@ function BlurModal(props) {
         });
         // Play audio and trigger stars
         props.handlePlay();
-        props.setMountStars(true);
+        if (!isScreenSmall) props.setMountStars(true);
     };
 
     return (

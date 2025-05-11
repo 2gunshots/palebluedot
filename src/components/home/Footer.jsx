@@ -22,7 +22,7 @@ const Footer = () => {
                 style={{ height: "100%" }}
             ></div> */}
             <div className="relative z-5">
-                <h2 className="font-outfit font-semibold text-start py-5">
+                <h2 className="font-outfit font-semibold text-start py-2 md:py-5">
                     Mission Brief
                 </h2>
                 <div className="my-7 grid grid-cols-12 md:gap-x-10">

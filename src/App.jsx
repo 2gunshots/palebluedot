@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Body from "./components/home/Body";
 import BlurModal from "./components/home/Modal";
 import Nav from "./components/home/Nav";
@@ -11,6 +11,7 @@ function App() {
         audioRef.current.play();
     };
     const [mountStars, setMountStars] = useState(false);
+    useEffect
     return (
         <>
             <div className="flex flex-col h-screen w-full bg-theme transition-colors duration-300 overflow-auto">
