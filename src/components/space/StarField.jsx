@@ -41,6 +41,7 @@ const StarField = () => {
             ref={spaceRef}
             className="h-full fixed inset-0 overflow-hidden m-2"
         >
+            <ShootingStar />
             {smallStars.map((item) => {
                 const { top, left } = generatePositions();
                 return (
@@ -55,7 +56,7 @@ const StarField = () => {
             {colorStars.map((item) => {
                 return <MidStar />;
             })}
-            <ShootingStar />
+
             {/* <Comet /> */}
             {clouds.map((item) => {
                 const top = Math.random() * 400;

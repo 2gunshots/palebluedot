@@ -5,9 +5,9 @@ const ShootingStar = () => {
     const [isMounted, setIsMounted] = useState(true);
     // const [opacity, setOpacity] = useState(0);
     const side = Math.floor(Math.random() + 0.5);
-    console.log(side);
-    const xStart = -100;
-    const yStart = -100;
+    // console.log(side);
+    const xStart = 100;
+    const yStart = 100;
     const xEnd = window.innerWidth + 250;
     const yEnd = window.innerHeight + 250;
     const dx = xEnd - xStart;
@@ -18,7 +18,9 @@ const ShootingStar = () => {
     const height = ".7px";
     const starRef = useRef(null);
     useEffect(() => {
-        setIsMounted((prev) => !prev);
+        // console.log("useEffect triggered");
+        // setIsMounted((prev) => !prev);
+        // setIsMounted(true);
         gsap.fromTo(
             starRef.current,
             {
@@ -52,7 +54,7 @@ const ShootingStar = () => {
                         top: -100,
 
                         // transformOrigin: "right center",
-                        opacity: 0.5,
+                        // opacity: 0.5,
                     }}
                     className="absolute z-2 flex justify-end items-center bg-gradient-to-r from-transparent to-white"
                 >
