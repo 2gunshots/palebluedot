@@ -125,7 +125,7 @@ const LightningCanvas = () => {
         <div
             style={{
                 scale: Math.random() * 2 + 1,
-                transform: `rotate(${Math.random() * 180}deg)`,
+                transform: `rotate(${Math.random() * 360}deg)`,
             }}
             ref={lRef}
             className="blur-sm flex justify-center items-center select-none pointer-events-none"

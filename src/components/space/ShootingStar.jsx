@@ -70,7 +70,7 @@ const ShootingStar = () => {
                             style={{
                                 width: "100px",
                                 height: "2px",
-                                opacity: 0.6,
+                                opacity: 0.7,
                             }}
                             className="absolute flex justify-end items-center blur-xs bg-gradient-to-r from-transparent to-blue-400"
                         >
@@ -78,7 +78,7 @@ const ShootingStar = () => {
                                 style={{
                                     width: "140px",
                                     height: "5px",
-                                    opacity: 0.3,
+                                    opacity: 0.4,
                                 }}
                                 className="absolute flex justify-end items-center blur-sm  bg-gradient-to-r from-transparent to-blue-400"
                             ></div>
