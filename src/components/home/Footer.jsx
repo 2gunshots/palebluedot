@@ -23,7 +23,7 @@ const Footer = () => {
         };
     }, []);
     return (
-        <footer className="relative grid grid-cols-12 gap-3 gap-y-9 z-5 text-center px-10 py-16 pb-[calc(4rem+env(safe-area-inset-bottom))] pt-20 bg-black overflow-clip">
+        <footer className="h-full w-full relative grid  grid-cols-12  gap-3 gap-y-9 z-5 text-center px-10 py-16  pt-20 bg-black overflow-clip">
             {/* <h1 className="font-grotesk text-8xl col-span-7 flex items-end justify-start">
                 Skies
             </h1> */}
@@ -84,9 +84,9 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            {/* <div className="absolute w-fit left-1/2 transform -translate-x-1/2 ">
+            <div className="absolute w-fit left-1/2 transform -translate-x-1/2 ">
                 {isMounted && <LightningCanvas />}
-            </div> */}
+            </div>
         </footer>
     );
 };
