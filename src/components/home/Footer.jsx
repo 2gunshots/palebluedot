@@ -32,9 +32,10 @@ const Footer = () => {
                     Voyager 1's Pale Blue Dot
                 </h4>
                 <div className="opacity-75 font-grotesk font-light">
-                    Hey, we're all growing, learning, reaching for more. And as
-                    we do, it's worth remembering that this tiny planet is the
-                    only one we've got. Take a moment to see it.
+                    Hey, glad you're here. We're all growing, learning, reaching
+                    for more. And as we do, it's worth remembering that this
+                    tiny planet is the only one we've got. Take a moment to
+                    really see it.
                 </div>
             </div>
             <div className="font-grotesk font-normal text-[12px] md:text-[12px] lg:text-[14px] flex flex-col items-start col-span-5 lg:col-start-8 lg:col-span-2">

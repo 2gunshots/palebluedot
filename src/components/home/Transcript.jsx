@@ -36,7 +36,7 @@ const Transcript = ({ audioRef }) => {
                                 key={i}
                                 className={`transition-colors duration-50 ${
                                     i === activeIndex
-                                        ? "underline "
+                                        ? "bg-indigo-50 text-black "
                                         : ""
                                 }`}
                             >
