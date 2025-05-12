@@ -1,104 +1,92 @@
-import { useState, useEffect } from "react";
-import DiscoverySection from "./DiscoverySection ";
-
+import { useEffect, useState } from "react";
+import LightningCanvas from "../space/Lightning";
 const Footer = () => {
-    const images = [
-        "https://science.nasa.gov/wp-content/uploads/2023/12/voyager-gold-record-display-10-5-1977-30214218763-o.jpg",
-        "https://science.nasa.gov/wp-content/uploads/2024/03/voyager-golden-record-cover.jpg",
-    ];
-    const [randomRecord, setRandomRecord] = useState("");
-
+    const [isMounted, setIsMounted] = useState(false);
     useEffect(() => {
-        const randomIndex = Math.floor(Math.random() * images.length);
-        setRandomRecord(images[randomIndex]);
+        // Delay initial mount by 2 seconds (2000ms)
+        const initialDelay = setTimeout(() => {
+            setIsMounted(true);
+        }, 2000);
+
+        // Re-mount every 5 seconds (5000ms) after the initial mount
+        const interval = setInterval(() => {
+            setIsMounted(false); // Unmount it
+            setTimeout(() => {
+                setIsMounted(true); // Re-mount after delay
+            }, 1000); // Re-mount after 1 second delay
+        }, 5000);
+
+        // Clean up timeouts and intervals
+        return () => {
+            clearTimeout(initialDelay);
+            clearInterval(interval);
+        };
     }, []);
     return (
-        <footer
-            style={{ backdropFilter: "blur(10px)" }}
-            className="relative z-5 text-center px-10 py-15 bg-white text-black"
-        >
-            {/* <div
-                className="absolute inset-0 bg-white z-[-1]"
-                style={{ height: "100%" }}
-            ></div> */}
-            <div className="relative z-5">
-                <h2 className="font-outfit font-semibold text-start py-2 md:py-5">
-                    Mission Brief
-                </h2>
-                <div className="my-7 grid grid-cols-12 md:gap-x-10">
-                    <ul className="col-span-12 lg:col-span-7 border-b">
-                        <li>
-                            <DiscoverySection
-                                id={1}
-                                title="Sagan's Dream Shot"
-                                description="Carl Sagan played a leading role in the U.S. space program. The prominent planetary scientist was a consultant and adviser to NASA beginning in the 1950s. He briefed the Apollo astronauts before their flights to the Moon."
-                                link="https://science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot/"
-                            />
-                            <DiscoverySection
-                                id={2}
-                                title="What's on the Record?"
-                                description="The record features images and a variety of natural sounds, such thunder, birds, musical selections from different cultures and eras, and spoken greetings in 55 languages."
-                                link="https://science.nasa.gov/mission/voyager/golden-record-contents/"
-                            />
-                            <DiscoverySection
-                                id={3}
-                                title="Where are Voyagers now?"
-                                description="Both Voyager 1 and Voyager 2 have reached interstellar space and each continue their unique journey deeper into the cosmos."
-                                link="https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/"
-                            />
-                        </li>
-                    </ul>
-                    <div className="hidden mx-5 lg:block lg:col-span-5 rounded-full w-fill aspect-square overflow-hidden">
-                        <img
-                            src={randomRecord}
-                            alt="Voyager Golden Record"
-                            className="object-cover transform scale-120 origin-center"
-                        />
-                    </div>
+        <footer className="relative grid grid-cols-12 gap-3 gap-y-9 z-5 text-center px-10 pb-15 pt-20 bg-black overflow-clip">
+            {/* <h1 className="font-grotesk text-8xl col-span-7 flex items-end justify-start">
+                Skies
+            </h1> */}
+            <div className="col-span-12  lg:col-span-4 flex flex-col items-start text-[12px] md:text-[12px] lg:text-[14px] text-start">
+                <h4 className="pb-5 lg:pb-7 font-grotesk ">
+                    Voyager 1's Pale Blue Dot
+                </h4>
+                <div className="opacity-75 font-grotesk font-light">
+                    Hey, we're all growing, learning, reaching for more. And as
+                    we do, it's worth remembering that this tiny planet is the
+                    only one we've got. Take a moment to see it.
                 </div>
             </div>
-
-            <div>
-                <p>
-                    <span className="font-medium">Text excerpts from: </span>
-                    <br />
-                    Carl Sagan,{" "}
-                    <em>
-                        Pale Blue Dot: A Vision of the Human Future in Space
-                    </em>
-                    , 1994. <br />
-                    NASA Voyager Mission Archives. <br />
-                    Audio narration © Carl Sagan Estate. <br />
-                </p>
-                {/* <div className="flex gap-25 md:block">
-                    <p className="mt-3 flex flex-col  md:flex-row gap-x-2">
-                        <span className="font-medium">Sources: </span>
-                        <a
-                            href="https://www.planetary.org/worlds/pale-blue-dot"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline"
-                        >
-                            Planetary Society: Pale Blue Dot
-                        </a>{" "}
-                        <span className="hidden md:block">|</span>{" "}
-                        <a
-                            href="https://www.loc.gov/item/cosmos000110/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline"
-                        >
-                            Library of Congress: Carl Sagan Archive
-                        </a>
-                    </p>
-                    <div className="mt-3 flex flex-col  md:flex-row gap-x-2">
-                        <p className="font-medium">Page Creater: </p>
-                        <p>Aarya Rokade</p>
-                    </div>
-                </div> */}
+            <div className="font-grotesk font-normal text-[12px] md:text-[12px] lg:text-[14px] flex flex-col items-start col-span-5 lg:col-start-8 lg:col-span-2">
+                <h5 className="pb-5 lg:pb-7 text-[14px] lg:text-[16px]">
+                    Socials
+                </h5>
+                <ul className="grid grid-cols-2 gap-x-5 gap-y-1 md:gap-x-10 md:gap-y-3 grid-rows-2">
+                    {/* <div className="opacity-70 font-light text-start">
+                        Instagram
+                    </div> */}
+                    <a
+                        href="https://www.youtube.com/@iseeefire"
+                        target="_blank"
+                    >
+                        <li className="opacity-70 font-light text-start hover:underline">
+                            Youtube
+                        </li>
+                    </a>
+                    <a href="https://www.x.com/crashcraters" target="_blank">
+                        <li className="opacity-70 font-light text-start hover:underline">
+                            Twitter
+                        </li>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/aarya117/"
+                        target="_blank"
+                    >
+                        <li className="opacity-70 font-light text-start hover:underline">
+                            LinkedIn
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div className="font-grotesk col-span-6 lg:col-span-3 lg:col-start-10 text-[12px] md:text-[12px] lg:text-[14px] flex flex-col items-start">
+                <div>
+                    <h5 className="pb-5 lg:pb-7 text-start text-[14px] lg:text-[16px]">
+                        Credits
+                    </h5>
+                    <ul className="flex flex-col gap-y-1  md:gap-y-3 ">
+                        <li className="opacity-70 font-light text-start">
+                            NASA Voyager Mission Archives.
+                        </li>
+                        <li className="opacity-70 font-light text-start">
+                            Audio narration © Carl Sagan Estate.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div className="absolute w-fit left-1/2 transform -translate-x-1/2 ">
+                {isMounted && <LightningCanvas />}
             </div>
         </footer>
     );
 };
-
 export default Footer;

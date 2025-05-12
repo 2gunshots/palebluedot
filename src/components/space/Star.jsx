@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 const Star = () => {
     const starSize = Math.random() * 0.9 + 0.4; //.3 to 1.2
     const StarStats = {
-        opacity: Math.random() * 0.2 + 0.2, //0.2
+        opacity: Math.random() * 0.2 + 0.3, //0.2
         scale: Math.random() * 0.5 + 0.5, //0.7
         duration: Math.random() * 0.3 + 0.1, //0.1
         repeatDelay: Math.random() * 5 + 0.5, //0.5

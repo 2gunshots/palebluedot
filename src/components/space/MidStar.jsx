@@ -5,7 +5,7 @@ const MidStar = () => {
     const starSize = Math.random() * 0.5 + 0.7; //1 to 1.2
     const StarStats = {
         opacity: Math.random() * 0.2 + 0.3, //0.2
-        scale: Math.random() * 0.5, //0.7
+        scale: Math.random() * 0.5 + 0.7, //0.7
         duration: Math.random() * 0.3 + 0.1, //0.1
         repeatDelay: Math.random() * 1 + 0.5, //0.5
     };
@@ -14,11 +14,11 @@ const MidStar = () => {
         gsap.fromTo(
             starRef.current,
             {
-                opacity: 0.7,
+                opacity: 0.8,
             },
             {
                 opacity: StarStats.opacity, //.1 to .4
-                scale: 1,
+                scale: StarStats.scale,
                 duration: StarStats.duration,
                 repeat: -1,
                 yoyo: false,

@@ -6,6 +6,7 @@ import ShootingStar from "./ShootingStar";
 import CloudSky from "./CloudSky";
 import Comet from "./Comet";
 import gsap from "gsap";
+import StarExplode from "./StarExplode";
 const StarField = () => {
     const smallStarsCount = 1200;
     const glowStarsCount = 150;
@@ -31,7 +32,7 @@ const StarField = () => {
             },
             {
                 opacity: 1,
-                duration: 7,
+                // duration: 7,
                 ease: "power1.in",
             }
         );
@@ -41,6 +42,8 @@ const StarField = () => {
             ref={spaceRef}
             className="h-full w-full fixed inset-0 overflow-hidden m-2"
         >
+            {/* <StarExplode /> */}
+
             <ShootingStar />
             {smallStars.map((item) => {
                 const { top, left } = generatePositions();

@@ -4,8 +4,8 @@ import { gsap } from "gsap";
 const StarGlow = () => {
     const starSize = Math.random() * 0.5 + 1.5; //1 to 1.2
     const StarStats = {
-        opacity: Math.random() * 0.2 + 0.4, //0.2
-        scale: Math.random() * 0.5 + 0.5, //0.7
+        opacity: Math.random() * 0.2 + 0.5, //0.2
+        scale: Math.random() * 0.4 + 0.6, //0.7
         duration: Math.random() * 0.3 + 0.1, //0.1
         repeatDelay: Math.random() * 5 + 0.5, //0.5
     };
@@ -14,6 +14,7 @@ const StarGlow = () => {
         gsap.fromTo(
             starRef.current,
             {
+                scale: StarStats.scale,
                 opacity: 0.5,
             },
             {

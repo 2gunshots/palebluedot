@@ -65,7 +65,7 @@ function BlurModal(props) {
                     {/* Modal Box */}
                     <div
                         ref={modalRef}
-                        className="bg-black flex flex-col items-center justify-center p-15 py-20 sm:my-0 sm:mx-20 gap-5 rounded-lg shadow-xl w-full max-w-md relative "
+                        className="bg-black flex flex-col items-center justify-center p-15 py-20 sm:my-0 sm:mx-20 gap-5 rounded-xl shadow-xl w-full max-w-md relative "
                     >
                         {/* <h2 className="text-2xl font-semibold mb-4">
                             Modal Title
