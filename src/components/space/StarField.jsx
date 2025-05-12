@@ -32,7 +32,7 @@ const StarField = () => {
             },
             {
                 opacity: 1,
-                // duration: 7,
+                duration: 7,
                 ease: "power1.in",
             }
         );
