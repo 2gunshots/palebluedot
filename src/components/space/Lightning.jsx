@@ -124,7 +124,7 @@ const LightningCanvas = () => {
     return (
         <div
             style={{
-                scale: Math.random() * 3 + 1,
+                scale: Math.random() * 2 + 1,
                 transform: `rotate(${Math.random() * 180}deg)`,
             }}
             ref={lRef}
@@ -134,7 +134,7 @@ const LightningCanvas = () => {
                 ref={canvasRef}
                 width={200}
                 height={800}
-                // style={{ background: "gray", display: "block" }}
+                // style={{ background: "red", display: "block" }}
             />
 
             {/* <button

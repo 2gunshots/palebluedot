@@ -31,7 +31,7 @@ function App() {
 
     return (
         <>
-            <div className="flex flex-col h-screen w-full bg-theme transition-colors duration-300 overflow-auto">
+            <div className="flex flex-col min-h-screen w-full bg-theme transition-colors duration-300 ">
                 {/* <Nav audioRef={audioRef} /> */}
                 <audio
                     ref={audioRef}
