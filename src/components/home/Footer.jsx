@@ -23,7 +23,7 @@ const Footer = () => {
         };
     }, []);
     return (
-        <footer className="relative grid grid-cols-12 gap-3 gap-y-9 z-5 text-center px-10 pb-15 pt-20 bg-black overflow-clip">
+        <footer className="relative grid grid-cols-12 gap-3 gap-y-9 z-5 text-center px-10 py-16 pb-[calc(4rem+env(safe-area-inset-bottom))] pt-20 bg-black overflow-clip">
             {/* <h1 className="font-grotesk text-8xl col-span-7 flex items-end justify-start">
                 Skies
             </h1> */}
@@ -69,7 +69,7 @@ const Footer = () => {
                     </a>
                 </ul>
             </div>
-            <div className="font-grotesk col-span-6 lg:col-span-3 lg:col-start-10 text-[12px] md:text-[12px] lg:text-[14px] flex flex-col items-start">
+            <div className="font-grotesk col-span-7 lg:col-span-3 lg:col-start-10 text-[12px] md:text-[12px] lg:text-[14px] flex flex-col items-start">
                 <div>
                     <h5 className="pb-5 lg:pb-7 text-start text-[14px] lg:text-[16px]">
                         Credits

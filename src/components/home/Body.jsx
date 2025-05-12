@@ -34,7 +34,7 @@ const Body = ({ audioRef }) => {
                     style={{ backdropFilter: "blur(10px)" }}
                     className="flex flex-col justify-center items-center w-full px-10 py-20 gap-10 bg-black/0 opacity-0 overflow-hidden"
                 >
-                    <p className="font-outfit flex gap-15">
+                    <p className="font-outfit flex gap-10 sm:gap-15">
                         <span>February 14, 1990</span>
                         <span className="opacity-50">Voyager 1 Looks Back</span>
                     </p>
