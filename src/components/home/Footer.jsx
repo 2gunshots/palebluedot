@@ -38,7 +38,7 @@ const Footer = () => {
                     really see it.
                 </div>
             </div>
-            <div className="font-grotesk font-normal text-[12px] md:text-[12px] lg:text-[14px] flex flex-col items-start col-span-5 lg:col-start-8 lg:col-span-2">
+            <div className="font-grotesk text-[12px] md:text-[12px] lg:text-[14px] flex flex-col items-start col-span-5 lg:col-start-8 lg:col-span-2">
                 <h5 className="pb-5 lg:pb-7 text-[14px] lg:text-[16px]">
                     Socials
                 </h5>
@@ -84,9 +84,9 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="absolute w-fit left-1/2 transform -translate-x-1/2 ">
+            {/* <div className="absolute w-fit left-1/2 transform -translate-x-1/2 ">
                 {isMounted && <LightningCanvas />}
-            </div>
+            </div> */}
         </footer>
     );
 };
