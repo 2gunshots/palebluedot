@@ -40,6 +40,9 @@
         /* font-weight: 300; */
         @apply font-light text-justify text-[14px] lg:text-[16px];
     }
+    .no-scroll {
+        overflow: hidden;
+    }
 }
 
 @layer components {

@@ -27,7 +27,7 @@ const Footer = () => {
             {/* <h1 className="font-grotesk text-8xl col-span-7 flex items-end justify-start">
                 Skies
             </h1> */}
-            <div className="col-span-12  lg:col-span-4 flex flex-col items-start text-[12px] md:text-[12px] lg:text-[14px] text-start">
+            <div className="z-10 col-span-12  lg:col-span-4 flex flex-col items-start text-[12px] md:text-[12px] lg:text-[14px] text-start">
                 <h4 className="pb-5 lg:pb-7 font-grotesk ">
                     Voyager 1's Pale Blue Dot
                 </h4>
@@ -38,7 +38,7 @@ const Footer = () => {
                     really see it.
                 </div>
             </div>
-            <div className="font-grotesk text-[12px] md:text-[12px] lg:text-[14px] flex flex-col items-start col-span-5 lg:col-start-8 lg:col-span-2">
+            <div className="z-10 font-grotesk text-[12px] md:text-[12px] lg:text-[14px] flex flex-col items-start col-span-5 lg:col-start-8 lg:col-span-2">
                 <h5 className="pb-5 lg:pb-7 text-[14px] lg:text-[16px]">
                     Socials
                 </h5>
@@ -69,7 +69,7 @@ const Footer = () => {
                     </a>
                 </ul>
             </div>
-            <div className="font-grotesk col-span-7 lg:col-span-3 lg:col-start-10 text-[12px] md:text-[12px] lg:text-[14px] flex flex-col items-start">
+            <div className="z-10 font-grotesk col-span-7 lg:col-span-3 lg:col-start-10 text-[12px] md:text-[12px] lg:text-[14px] flex flex-col items-start">
                 <div>
                     <h5 className="pb-5 lg:pb-7 text-start text-[14px] lg:text-[16px]">
                         Credits

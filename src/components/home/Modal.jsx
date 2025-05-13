@@ -32,6 +32,19 @@ function BlurModal(props) {
                 }
             );
         }
+        const body = document.body;
+        if (isOpen) {
+            body.classList.add("overflow-hidden");
+            body.classList.add("h-screen");
+        } else {
+            body.classList.remove("overflow-hidden");
+            body.classList.remove("h-screen");
+        }
+
+        return () => {
+            body.classList.remove("overflow-hidden");
+            body.classList.remove("h-screen");
+        };
     }, [isOpen]);
 
     const handleClose = () => {
@@ -61,28 +74,30 @@ function BlurModal(props) {
 
             {/* Overlay + Modal */}
             {isOpen && (
-                <div className="fixed inset-0 z-10 flex items-center justify-center bg-black/40 backdrop-blur-sm transition-all">
-                    {/* Modal Box */}
-                    <div
-                        ref={modalRef}
-                        className="bg-black flex flex-col items-center justify-center p-15 py-20 sm:my-0 sm:mx-20 gap-5 rounded-xl shadow-xl w-full max-w-md relative "
-                    >
-                        {/* <h2 className="text-2xl font-semibold mb-4">
+                <>
+                    <div className="fixed inset-0 z-10 flex items-center justify-center bg-black/40 backdrop-blur-sm transition-all overflow-hidden">
+                        {/* Modal Box */}
+                        <div
+                            ref={modalRef}
+                            className="bg-black flex flex-col items-center justify-center p-15 py-20 sm:my-0 sm:mx-20 gap-5 rounded-xl shadow-xl w-full max-w-md relative "
+                        >
+                            {/* <h2 className="text-2xl font-semibold mb-4">
                             Modal Title
                         </h2> */}
-                        <p className="text-center">
-                            This experience includes narration by Carl Sagan
-                            from the iconic "Pale Blue Dot." To begin, we need
-                            your permission to play audio.
-                        </p>
-                        <button
-                            onClick={handleClose}
-                            className="mt-6 px-4 py-2 bg-white text-black font-grotesk font-medium rounded-md cursor-pointer hover:opacity-90"
-                        >
-                            Begin Experience
-                        </button>
+                            <p className="text-center">
+                                This experience includes narration by Carl Sagan
+                                from the iconic "Pale Blue Dot." To begin, we
+                                need your permission to play audio.
+                            </p>
+                            <button
+                                onClick={handleClose}
+                                className="mt-6 px-4 py-2 bg-white text-black font-grotesk font-medium rounded-md cursor-pointer hover:opacity-90"
+                            >
+                                Begin Experience
+                            </button>
+                        </div>
                     </div>
-                </div>
+                </>
             )}
         </div>
     );

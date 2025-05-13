@@ -20,6 +20,15 @@ function App() {
 
     //     requestAnimationFrame(raf);
     // }, []);
+    useEffect(() => {
+        // Delay to ensure scroll after modal mounts
+        const scrollTimer = setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 200); // Slight delay ensures modal doesn’t override scroll
+
+        return () => clearTimeout(scrollTimer);
+    }, []);
+
     const audioRef = useRef(null);
     const handlePlay = () => {
         // const audio = audioRef.current;
@@ -31,7 +40,7 @@ function App() {
 
     return (
         <>
-            <div className="flex flex-col min-h-screen w-full bg-theme transition-colors duration-300 ">
+            <div className="flex flex-col min-h-screen w-full bg-theme transition-colors duration-300">
                 {/* <Nav audioRef={audioRef} /> */}
                 <audio
                     ref={audioRef}

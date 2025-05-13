@@ -38,15 +38,27 @@ const LightningCanvas = () => {
         // Clear the part of the line already drawn (simulating erase effect)
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
+        //outest
+        ctx.beginPath();
+        ctx.moveTo(points[0].x, points[0].y);
+        for (let i = 1; i < count; i++) {
+            ctx.lineTo(points[i].x, points[i].y);
+        }
+        ctx.strokeStyle = "#24192D20"; //#24192D //rgba(0, 200, 255, 0.1)
+        ctx.lineWidth = 200;
+        ctx.shadowColor = "#24192D";
+        ctx.shadowBlur = 25;
+        ctx.stroke();
+
         // Outer glow (strong blur)
         ctx.beginPath();
         ctx.moveTo(points[0].x, points[0].y);
         for (let i = 1; i < count; i++) {
             ctx.lineTo(points[i].x, points[i].y);
         }
-        ctx.strokeStyle = "rgba(0, 200, 255, 0.5)";
-        ctx.lineWidth = 9;
-        ctx.shadowColor = "rgba(0, 200, 255, 1)";
+        ctx.strokeStyle = "#7A598530"; //#7A5985 //rgba(0, 200, 255, 0.5)
+        ctx.lineWidth = 50;
+        ctx.shadowColor = "#7A5985"; //rgba(0, 200, 255, 0.5)
         ctx.shadowBlur = 25;
         ctx.stroke();
 
@@ -56,7 +68,7 @@ const LightningCanvas = () => {
         for (let i = 1; i < count; i++) {
             ctx.lineTo(points[i].x, points[i].y);
         }
-        ctx.strokeStyle = "rgba(0, 200, 255, 0.8)";
+        ctx.strokeStyle = "#9D71AD"; //#593A6D //rgba(0, 200, 255, 0.8)
         ctx.lineWidth = 4;
         ctx.shadowBlur = 10;
         ctx.stroke();
@@ -67,7 +79,7 @@ const LightningCanvas = () => {
         for (let i = 1; i < count; i++) {
             ctx.lineTo(points[i].x, points[i].y);
         }
-        ctx.strokeStyle = "white";
+        ctx.strokeStyle = "#B48EB8"; //#B48EB8
         ctx.lineWidth = 1;
         ctx.shadowBlur = 0;
         ctx.stroke();
@@ -97,7 +109,8 @@ const LightningCanvas = () => {
 
         gsap.to(progressObj, {
             progress: 1,
-            duration: 0.4,
+            duration: 0.3,
+            delay: Math.random() * 0.1 +.1,
             onUpdate: () => {
                 // Clear the canvas each time to simulate erase effect
                 drawLightning(ctx, points1, progressObj.progress);
@@ -124,7 +137,7 @@ const LightningCanvas = () => {
     return (
         <div
             style={{
-                scale: Math.random() * 2 + 1,
+                scale: Math.random() * 0.5 + 1,
                 transform: `rotate(${Math.random() * 360}deg)`,
             }}
             ref={lRef}
@@ -132,9 +145,13 @@ const LightningCanvas = () => {
         >
             <canvas
                 ref={canvasRef}
-                width={200}
+                width={800}
                 height={800}
-                // style={{ background: "red", display: "block" }}
+                style={{
+                    background:
+                        "radial-gradient(circle, #1A152180, transparent)",
+                    display: "block",
+                }}
             />
 
             {/* <button
