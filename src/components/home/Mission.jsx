@@ -56,6 +56,7 @@ const Mission = () => {
                             src={randomRecord}
                             alt="Voyager Golden Record"
                             className="object-cover transform scale-120 origin-center"
+                            fetchPriority="low"
                         />
                     </div>
                 </div>
