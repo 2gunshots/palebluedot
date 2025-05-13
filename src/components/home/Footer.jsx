@@ -43,30 +43,30 @@ const Footer = () => {
                     Socials
                 </h5>
                 <ul className="grid grid-cols-2 gap-x-5 gap-y-1 md:gap-x-10 md:gap-y-3 grid-rows-2">
-                    {/* <div className="opacity-70 font-light text-start">
-                        Instagram
-                    </div> */}
-                    <a
-                        href="https://www.youtube.com/@iseeefire"
-                        target="_blank"
-                    >
-                        <li className="opacity-70 font-light text-start hover:underline">
-                            Youtube
-                        </li>
-                    </a>
-                    <a href="https://www.x.com/crashcraters" target="_blank">
-                        <li className="opacity-70 font-light text-start hover:underline">
+                    <li className="opacity-70 font-light text-start hover:underline">
+                        <a
+                            href="https://www.youtube.com/@iseeefire"
+                            target="_blank"
+                        >
+                            YouTube
+                        </a>
+                    </li>
+                    <li className="opacity-70 font-light text-start hover:underline">
+                        <a
+                            href="https://www.x.com/crashcraters"
+                            target="_blank"
+                        >
                             Twitter
-                        </li>
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/aarya117/"
-                        target="_blank"
-                    >
-                        <li className="opacity-70 font-light text-start hover:underline">
+                        </a>
+                    </li>
+                    <li className="opacity-70 font-light text-start hover:underline">
+                        <a
+                            href="https://www.linkedin.com/in/aarya117/"
+                            target="_blank"
+                        >
                             LinkedIn
-                        </li>
-                    </a>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div className="z-10 font-grotesk col-span-7 lg:col-span-3 lg:col-start-10 text-[12px] md:text-[12px] lg:text-[14px] flex flex-col items-start">
