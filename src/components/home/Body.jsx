@@ -48,6 +48,7 @@ const Body = ({ audioRef }) => {
                         ref={s2Ref}
                         src="/pale blue dot.webp"
                         alt="A Pale Blue Dot"
+                        fetchPriority="high"
                         // onLoad={() => setIsLoaded(true)}
                         className="w-full h-full md:rounded-2xl opacity-0"
                     />
