@@ -1,11 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import Body from "./components/home/Body";
 import BlurModal from "./components/home/Modal";
-import Nav from "./components/home/Nav";
 import StarField from "./components/space/StarField";
 import Mission from "./components/home/Mission";
 import Footer from "./components/home/Footer";
-import LightningCanvas from "./components/space/Lightning";
 // import Lenis from "@studio-freight/lenis";
 
 function App() {
