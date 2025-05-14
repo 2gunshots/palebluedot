@@ -15,9 +15,9 @@ function BlurModal(props) {
             setIsScreenSmall(true);
         }
         document.fonts.ready.then(() => {
-            gsap.to(s1Ref.current, {
+            gsap.to(modalRef.current, {
                 opacity: 1,
-                duration: 0.5,
+                duration: 0.1,
                 ease: "power2.out",
             });
         });
@@ -51,7 +51,7 @@ function BlurModal(props) {
         return () => {
             body.classList.remove("overflow-hidden");
             body.classList.remove("h-screen");
-        }
+        };
     }, [isOpen]);
 
     const handleClose = () => {
