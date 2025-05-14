@@ -27,11 +27,11 @@ const Footer = () => {
             {/* <h1 className="font-grotesk text-8xl col-span-7 flex items-end justify-start">
                 Skies
             </h1> */}
-            <div className="z-10 col-span-12  lg:col-span-4 flex flex-col items-start text-[12px] md:text-[12px] lg:text-[14px] text-start">
+            <div className="z-10 col-span-12  lg:col-span-5 flex flex-col items-start text-[12px] md:text-[12px] lg:text-[14px] text-start">
                 <h4 className="pb-5 lg:pb-7 font-grotesk ">
                     Voyager 1's Pale Blue Dot
                 </h4>
-                <div className="opacity-75 font-grotesk font-light">
+                <div className="opacity-70 font-jura font-semibold">
                     Hey, glad you're here. We're all growing, learning, reaching
                     for more. And as we do, it's worth remembering that this
                     tiny planet is the only one we've got. Take a moment to
@@ -42,8 +42,8 @@ const Footer = () => {
                 <h5 className="pb-5 lg:pb-7 text-[14px] lg:text-[16px]">
                     Socials
                 </h5>
-                <ul className="grid grid-cols-2 gap-x-5 gap-y-1 md:gap-x-10 md:gap-y-3 grid-rows-2">
-                    <li className="opacity-70 font-light text-start hover:underline">
+                <ul className="font-jura font-semibold grid grid-cols-2 gap-x-5 gap-y-1 md:gap-x-10 md:gap-y-3 grid-rows-2">
+                    <li className="opacity-70 text-start hover:underline">
                         <a
                             href="https://www.youtube.com/@iseeefire"
                             target="_blank"
@@ -51,7 +51,7 @@ const Footer = () => {
                             YouTube
                         </a>
                     </li>
-                    <li className="opacity-70 font-light text-start hover:underline">
+                    <li className="opacity-70 text-start hover:underline">
                         <a
                             href="https://www.x.com/crashcraters"
                             target="_blank"
@@ -59,7 +59,7 @@ const Footer = () => {
                             Twitter
                         </a>
                     </li>
-                    <li className="opacity-70 font-light text-start hover:underline">
+                    <li className="opacity-70 text-start hover:underline">
                         <a
                             href="https://www.linkedin.com/in/aarya117/"
                             target="_blank"
@@ -74,11 +74,11 @@ const Footer = () => {
                     <h5 className="pb-5 lg:pb-7 text-start text-[14px] lg:text-[16px]">
                         Credits
                     </h5>
-                    <ul className="flex flex-col gap-y-1  md:gap-y-3 ">
-                        <li className="opacity-70 font-light text-start">
+                    <ul className="font-jura font-semibold flex flex-col gap-y-1  md:gap-y-3 ">
+                        <li className="opacity-70 text-start">
                             NASA Voyager Mission Archives.
                         </li>
-                        <li className="opacity-70 font-light text-start">
+                        <li className="opacity-70 text-start">
                             Audio narration © Carl Sagan Estate.
                         </li>
                     </ul>

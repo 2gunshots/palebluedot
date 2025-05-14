@@ -22,9 +22,15 @@
     .font-artific {
         font-family: "Artific", sans-serif;
     }
+    .font-raleway {
+        font-family: "Raleway", sans-serif;
+    }
+    .font-jura {
+        font-family: "Jura", sans-serif;
+    }
 
     h1 {
-        @apply text-6xl md:text-7xl font-semibold;
+        @apply text-6xl md:text-7xl font-semibold tracking-wider;
     }
     h2 {
         @apply text-3xl md:text-4xl;
@@ -36,9 +42,8 @@
         @apply text-xl font-bold;
     }
     p {
-        font-family: "PowerGrotesk", sans-serif;
-        /* font-weight: 300; */
-        @apply font-light text-justify text-[14px] lg:text-[16px];
+        font-family: "Jura", sans-serif;
+        @apply text-justify font-semibold text-[14px] lg:text-[16px];
     }
     .no-scroll {
         overflow: hidden;

@@ -34,7 +34,7 @@ const Body = ({ audioRef }) => {
                     style={{ backdropFilter: "blur(10px)" }}
                     className="flex flex-col justify-center items-center w-full px-10 py-20 gap-10 bg-black/0 opacity-0 overflow-hidden"
                 >
-                    <p className="font-outfit flex gap-10 sm:gap-15">
+                    <p className="font-outfit font-light flex gap-10 sm:gap-15">
                         <span>February 14, 1990</span>
                         <span className="opacity-50">Voyager 1 Looks Back</span>
                     </p>
@@ -49,6 +49,8 @@ const Body = ({ audioRef }) => {
                         src="/pale blue dot.webp"
                         alt="A Pale Blue Dot"
                         fetchPriority="high"
+                        width="100%"
+                        height="100%"
                         // onLoad={() => setIsLoaded(true)}
                         className="w-full h-full md:rounded-2xl opacity-0"
                     />
@@ -58,7 +60,7 @@ const Body = ({ audioRef }) => {
                     className="flex flex-col justify-center w-full px-10 py-15 gap-7 bg-black/0"
                 >
                     <div className="w-full">
-                        <h2 className="capitalize font-artific text-start">
+                        <h2 className="capitalize font-grotesk text-start">
                             Pale blue dot.
                         </h2>
                     </div>

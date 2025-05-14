@@ -14,6 +14,13 @@ function BlurModal(props) {
         if (!checkScreenSize()) {
             setIsScreenSmall(true);
         }
+        document.fonts.ready.then(() => {
+            gsap.to(s1Ref.current, {
+                opacity: 1,
+                duration: 0.5,
+                ease: "power2.out",
+            });
+        });
     }, []);
 
     useEffect(() => {
@@ -44,7 +51,7 @@ function BlurModal(props) {
         return () => {
             body.classList.remove("overflow-hidden");
             body.classList.remove("h-screen");
-        };
+        }
     }, [isOpen]);
 
     const handleClose = () => {
@@ -84,14 +91,14 @@ function BlurModal(props) {
                             {/* <h2 className="text-2xl font-semibold mb-4">
                             Modal Title
                         </h2> */}
-                            <p className="text-center">
+                            <p className="font-jura text-sm font-medium text-center">
                                 This experience includes narration by Carl Sagan
                                 from the iconic "Pale Blue Dot." To begin, we
                                 need your permission to play audio.
                             </p>
                             <button
                                 onClick={handleClose}
-                                className="mt-6 px-4 py-2 bg-white text-black font-grotesk font-medium rounded-md cursor-pointer hover:opacity-90"
+                                className="font-jura mt-6 px-4 py-2 bg-white text-black font-grotesk font-bold rounded-md cursor-pointer hover:opacity-90"
                             >
                                 Begin Experience
                             </button>

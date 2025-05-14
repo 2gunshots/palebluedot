@@ -110,7 +110,7 @@ const LightningCanvas = () => {
         gsap.to(progressObj, {
             progress: 1,
             duration: 0.3,
-            delay: Math.random() * 0.1 +.1,
+            delay: Math.random() * 0.1 + 0.1,
             onUpdate: () => {
                 // Clear the canvas each time to simulate erase effect
                 drawLightning(ctx, points1, progressObj.progress);
@@ -130,7 +130,7 @@ const LightningCanvas = () => {
             { opacity: 1, duration: 0.1 }
         ).to(lRef.current, {
             opacity: 0,
-            duration: 1,
+            duration: 0.8,
         });
     }, []);
 
@@ -150,6 +150,7 @@ const LightningCanvas = () => {
                 style={{
                     background:
                         "radial-gradient(circle, #1A152180, transparent)",
+
                     display: "block",
                 }}
             />
