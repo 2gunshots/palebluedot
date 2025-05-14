@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import DiscoverySection from "./DiscoverySection ";
-import LightningCanvas from "../space/Lightning";
 
 const Mission = () => {
+    const titleRef = useRef(null);
     const images = [
         "https://science.nasa.gov/wp-content/uploads/2023/12/voyager-gold-record-display-10-5-1977-30214218763-o.jpg",
         "https://science.nasa.gov/wp-content/uploads/2024/03/voyager-golden-record-cover.jpg",

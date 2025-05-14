@@ -1,5 +1,5 @@
 // components/CloudSky.jsx
-import React, { useEffect, useRef } from "react";
+import  { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 export default function CloudSky() {

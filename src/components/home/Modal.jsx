@@ -98,7 +98,7 @@ function BlurModal(props) {
                             </p>
                             <button
                                 onClick={handleClose}
-                                className="font-jura mt-6 px-4 py-2 bg-white text-black font-grotesk font-bold rounded-md cursor-pointer hover:opacity-90"
+                                className="font-jura mt-6 px-4 py-2 bg-white text-black font-bold rounded-md cursor-pointer hover:opacity-90"
                             >
                                 Begin Experience
                             </button>

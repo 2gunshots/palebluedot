@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Header from "./Header";
 import Transcript from "./Transcript";
-import LightningCanvas from "../space/Lightning";
 
-const Body = ({ audioRef }) => {
+const Body = ({ audioRef, mountStars }) => {
     // const [isLoaded, setIsLoaded] = useState(false); //img
+    const titleRef = useRef(null);
     const s1Ref = useRef(null);
     const s2Ref = useRef(null);
     useEffect(() => {
@@ -38,7 +38,7 @@ const Body = ({ audioRef }) => {
                         <span>February 14, 1990</span>
                         <span className="opacity-50">Voyager 1 Looks Back</span>
                     </p>
-                    <h1 className=" font-grotesk text-center">
+                    <h1 ref={titleRef} className=" font-grotesk text-center">
                         Build Beyond Limits
                     </h1>
                 </div>

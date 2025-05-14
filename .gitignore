@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#files
+StarExplode.jsx
+Nav.jsx
+CloudSky.jsx

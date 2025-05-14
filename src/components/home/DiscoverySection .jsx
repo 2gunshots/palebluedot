@@ -1,7 +1,7 @@
 const DiscoverySection = ({ id, title, description, link }) => {
     return (
         <div className="flex flex-col md:flex-row items-start py-5 md:py-10 gap-x-10 gap-y-3 border-t">
-            <h3 className="font-offbit opacity-85">
+            <h3 className="font-turret opacity-85">
                 {String(id).padStart(2, "0")}
             </h3>
             <div className="flex flex-col gap-5 items-start">

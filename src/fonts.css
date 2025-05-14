@@ -1,11 +1,8 @@
-/* @font-face {
-    font-family: "PowerGrotesk";
-    src: url("/fonts/ClashGrotesk-Variable.ttf") format("truetype");
-    font-display: swap;
-} */
+
 @font-face {
-    font-family: "OffBit";
+    font-family: "TurretRoad";
     src: url("/fonts/TurretRoad-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
     font-display: swap;
 }
 @font-face {
@@ -31,60 +28,15 @@
     font-weight: 900;
     font-display: swap;
 } */
-@font-face {
-    font-family: "Artific";
-    src: url("/fonts/ArtificTrial-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-display: swap;
-}
+
 @font-face {
     font-family: "PowerGrotesk";
     src: url("/fonts/powergrotesk-regular-webfont.woff2") format("woff2"),
         url("/fonts/powergrotesk-regular-webfont.woff") format("woff");
     font-weight: 400;
-    /* src: url("/fonts/powergrotesk-regular.otf") format("opentype"); */
-    font-display: swap;
-    /* font-weight: normal;
-    font-style: normal; */
-}
-/* @font-face {
-    font-family: "PowerGrotesk";
-    src: url("/fonts/PowerGroteskTrial-Bold.ttf") format("truetype");
-    font-weight: 700;
     font-display: swap;
 }
-@font-face {
-    font-family: "PowerGrotesk";
-    src: url("/fonts/PowerGroteskTrial-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-display: swap;
-}
-@font-face {
-    font-family: "PowerGrotesk";
-    src: url("/fonts/PowerGroteskTrial-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-display: swap;
-}
-@font-face {
-    font-family: "PowerGrotesk";
-    src: url("/fonts/PowerGroteskTrial-Light.ttf") format("truetype");
-    font-weight: 300;
-    font-display: swap;
-}
-@font-face {
-    font-family: "PowerGrotesk";
-    src: url("/fonts/PowerGroteskTrial-Italic.ttf") format("truetype");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: "PowerGrotesk";
-    src: url("/fonts/PowerGroteskTrial-LightItalic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-} */
+
 @font-face {
     font-family: "Outfit";
     src: url("/fonts/Outfit-Variable.ttf") format("truetype");

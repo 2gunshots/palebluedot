@@ -54,7 +54,7 @@ function App() {
                     setMountStars={setMountStars}
                     handlePlay={handlePlay}
                 />
-                <Body audioRef={audioRef} />
+                <Body audioRef={audioRef} mountStars={mountStars} />
                 <Mission />
                 <Footer />
             </div>

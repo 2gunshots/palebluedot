@@ -6,10 +6,10 @@ const ShootingStar = () => {
     // const [opacity, setOpacity] = useState(0);
     const side = Math.floor(Math.random() + 0.5);
     // console.log(side);
-    const xStart = -100;
-    const yStart = -100;
-    const xEnd = window.innerWidth + 250;
-    const yEnd = window.innerHeight + 250;
+    const xStart = Math.random()*-100 -100; //-100
+    const yStart = Math.random()*-100 -100; //-100
+    const xEnd = window.innerWidth + 250; //window + 250
+    const yEnd = window.innerHeight + 250; //window + 250
     const dx = xEnd - xStart;
     const dy = yEnd - yStart;
     const angleRad = Math.atan2(dy, dx);

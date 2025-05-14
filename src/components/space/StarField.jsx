@@ -3,10 +3,7 @@ import Star from "./Star";
 import StarGlow from "./StarGlow";
 import MidStar from "./MidStar";
 import ShootingStar from "./ShootingStar";
-import CloudSky from "./CloudSky";
-import Comet from "./Comet";
 import gsap from "gsap";
-import StarExplode from "./StarExplode";
 const StarField = () => {
     const smallStarsCount = 1200;
     const glowStarsCount = 150;
