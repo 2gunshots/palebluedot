@@ -31,7 +31,7 @@ const Footer = () => {
                 <h4 className="pb-5 lg:pb-7 font-grotesk ">
                     Voyager 1's Pale Blue Dot
                 </h4>
-                <div className="opacity-70 font-jura font-semibold">
+                <div className="opacity-70 font-jura font-medium">
                     Hey, glad you're here. We're all growing, learning, reaching
                     for more. And as we do, it's worth remembering that this
                     tiny planet is the only one we've got. Take a moment to
