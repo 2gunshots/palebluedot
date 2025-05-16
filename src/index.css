@@ -43,7 +43,7 @@
     }
     p {
         font-family: "Jura", sans-serif;
-        @apply text-justify font-semibold text-[14px] lg:text-[16px];
+        @apply text-justify font-medium text-[14px] lg:text-[16px];
     }
 }
 

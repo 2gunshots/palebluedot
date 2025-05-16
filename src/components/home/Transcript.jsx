@@ -25,7 +25,7 @@ const Transcript = ({ audioRef }) => {
                                 He wrote: <br />
                             </span> */}
             <div className="my-1 w-3 max-w-3 bg-white/50"></div>
-            <div className="font-jura font-semibold text-justify text-[14px] lg:text-[16px]">
+            <div className="font-jura font-medium text-justify text-[14px] lg:text-[16px]">
                 {transcript.map((entry, i) => {
                     if (entry.isBreak) {
                         return <br key={`br-${i}`} />;
@@ -45,7 +45,7 @@ const Transcript = ({ audioRef }) => {
                         </>
                     );
                 })}
-                <pre className="font-jura font-semibold text-end not-italic">
+                <pre className="font-jura font-medium text-end not-italic">
                     -Carl Sagan, Pale Blue Dot
                 </pre>
             </div>
