@@ -42,7 +42,7 @@ const Footer = () => {
                 <h5 className="pb-5 lg:pb-7 text-[14px] lg:text-[16px]">
                     Socials
                 </h5>
-                <ul className="font-jura font-semibold grid grid-cols-2 gap-x-5 gap-y-1 md:gap-x-10 md:gap-y-3 grid-rows-2">
+                <ul className="font-jura font-medium grid grid-cols-2 gap-x-5 gap-y-1 md:gap-x-10 md:gap-y-3 grid-rows-2">
                     <li className="opacity-70 text-start hover:underline">
                         <a
                             href="https://www.youtube.com/@iseeefire"
@@ -74,7 +74,7 @@ const Footer = () => {
                     <h5 className="pb-5 lg:pb-7 text-start text-[14px] lg:text-[16px]">
                         Credits
                     </h5>
-                    <ul className="font-jura font-semibold flex flex-col gap-y-1  md:gap-y-3 ">
+                    <ul className="font-jura font-medium flex flex-col gap-y-1  md:gap-y-3 ">
                         <li className="opacity-70 text-start">
                             NASA Voyager Mission Archives.
                         </li>
