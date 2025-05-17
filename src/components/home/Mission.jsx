@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
-import DiscoverySection from "./DiscoverySection ";
+import DiscoverySection from "./DiscoverySection";
+import gsap from "gsap";
 
 const Mission = () => {
-    const titleRef = useRef(null);
+    const imgRef = useRef(null);
     const images = [
         "https://science.nasa.gov/wp-content/uploads/2023/12/voyager-gold-record-display-10-5-1977-30214218763-o.jpg",
         "https://science.nasa.gov/wp-content/uploads/2024/03/voyager-golden-record-cover.jpg",
@@ -14,6 +15,15 @@ const Mission = () => {
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * images.length);
         setRandomRecord(images[randomIndex]);
+        if (imgRef.current) {
+            gsap.to(imgRef.current, {
+                rotate: 360,
+                repeat: -1,
+                duration: 15,
+                ease: "linear",
+                transformOrigin: "50% 50%",
+            });
+        }
     }, []);
     return (
         <div
@@ -53,6 +63,7 @@ const Mission = () => {
                     </ul>
                     <div className="hidden mx-5 lg:block lg:col-span-5 rounded-full w-fill aspect-square overflow-hidden">
                         <img
+                            ref={imgRef}
                             src={randomRecord}
                             alt="Voyager Golden Record"
                             className="object-cover transform scale-120 origin-center"
