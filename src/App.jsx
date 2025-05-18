@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import Body from "./components/home/Body";
 import BlurModal from "./components/home/Modal";
-import StarField from "./components/space/StarField";
 import Mission from "./components/home/Mission";
 import Footer from "./components/home/Footer";
+import StarCanvas from "./components/space/StarCanvas";
 // import Lenis from "@studio-freight/lenis";
 
 function App() {
@@ -47,7 +47,8 @@ function App() {
                     preload="auto"
                 />
 
-                {mountStars && <StarField />}
+                {/* {mountStars && <StarField />} */}
+                {mountStars && <StarCanvas />}
                 <BlurModal
                     setMountStars={setMountStars}
                     handlePlay={handlePlay}
