@@ -4,6 +4,7 @@ import BlurModal from "./components/home/Modal";
 import Mission from "./components/home/Mission";
 import Footer from "./components/home/Footer";
 import StarCanvas from "./components/space/StarCanvas";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 // import Lenis from "@studio-freight/lenis";
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
                 <Body audioRef={audioRef} mountStars={mountStars} />
                 <Mission />
                 <Footer />
+                <SpeedInsights />
             </div>
         </>
     );
