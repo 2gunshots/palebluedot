@@ -104,13 +104,13 @@ const StarCanvas = () => {
                     }
                 }
 
-                if (star.glow) {
-                    ctx.shadowBlur = 10;
-                    ctx.shadowColor = "rgba(0, 255, 255, 0.4)";
-                } else {
-                    ctx.shadowBlur = 0;
-                    ctx.shadowColor = "transparent";
-                }
+                // if (star.glow) {
+                //     ctx.shadowBlur = 10;
+                //     ctx.shadowColor = "rgba(0, 255, 255, 0.4)";
+                // } else {
+                //     ctx.shadowBlur = 0;
+                //     ctx.shadowColor = "transparent";
+                // }
 
                 ctx.beginPath();
                 ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
