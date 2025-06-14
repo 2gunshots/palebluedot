@@ -30,7 +30,7 @@
     }
 
     h1 {
-        @apply text-6xl md:text-7xl font-semibold tracking-wider;
+        @apply text-5xl md:text-6xl font-semibold tracking-wider;
     }
     h2 {
         @apply text-3xl md:text-4xl;

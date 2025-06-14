@@ -1,7 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import DiscoverySection from "./DiscoverySection";
+import Heading from "./Heading";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { use } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Mission = () => {
+    const imageRef = useRef(null);
+
     const images = [
         "https://science.nasa.gov/wp-content/uploads/2023/12/voyager-gold-record-display-10-5-1977-30214218763-o.jpg",
         "https://science.nasa.gov/wp-content/uploads/2024/03/voyager-golden-record-cover.jpg",
@@ -14,6 +22,23 @@ const Mission = () => {
         const randomIndex = Math.floor(Math.random() * images.length);
         setRandomRecord(images[randomIndex]);
     }, []);
+    useEffect(() => {
+        gsap.fromTo(
+            imageRef.current,
+            { opacity: 0, filter: "blur(100px)" },
+            {
+                opacity: 1,
+                filter: "blur(0px)",
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: imageRef.current,
+                    start: "top 85%",
+                    toggleActions: "play none none none",
+                },
+            }
+        );
+    });
     return (
         <div
             style={{ backdropFilter: "blur(10px)" }}
@@ -24,9 +49,10 @@ const Mission = () => {
                 style={{ height: "100%" }}
             ></div> */}
             <div className="relative z-5">
-                <h2 className="font-outfit font-semibold text-start py-2 md:py-5">
+                {/* <h2 className="font-outfit font-semibold text-start py-2 md:py-5">
                     Mission Brief
-                </h2>
+                </h2> */}
+                <Heading title="Mission Brief" />
                 <div className="my-7 grid grid-cols-12 md:gap-x-10">
                     <ul className="col-span-12 lg:col-span-7 border-b">
                         <li>
@@ -52,6 +78,7 @@ const Mission = () => {
                     </ul>
                     <div className="hidden mx-5 lg:block lg:col-span-5 rounded-full w-fill aspect-square overflow-hidden">
                         <img
+                            ref={imageRef}
                             src={randomRecord}
                             alt="Voyager Golden Record"
                             className="object-cover transform scale-120 origin-center"

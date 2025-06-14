@@ -109,7 +109,7 @@ const LightningCanvas = () => {
 
         gsap.to(progressObj, {
             progress: 1,
-            duration: 0.3,
+            duration: 0.25,
             delay: Math.random() * 0.1 + 0.1,
             onUpdate: () => {
                 // Clear the canvas each time to simulate erase effect
